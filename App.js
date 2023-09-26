@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react'; // Import useState
-import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'; // Import SafeAreaView and ScrollView
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, FlatList } from 'react-native'; // Import SafeAreaView and ScrollView
 import * as SQLite from 'expo-sqlite';
 
 // Import FileSystem and Asset from 'expo-file-system'
@@ -55,16 +55,12 @@ export default function App() {
   }, []);
 
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View style={styles.container}>
-          {equipmentData.map((equipment) => (
-            <View key={equipment.id}>
-              <Text>{equipment.label_no}</Text>
-            </View>
-          ))}
-        </View>
-      </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <FlatList 
+        keyExtractor={(item) => item.id.toString()}
+        data={equipmentData}
+        renderItem={({item}) => <Text>{item.id}</Text>}  
+      />
     </SafeAreaView>
   );
 }
