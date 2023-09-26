@@ -24,7 +24,7 @@ export default function App() {
   useEffect(() => {
     const initDatabase = async () => {
       try {
-        const db = await openDatabase('./assets/database/biopro_mobile.sqlite');
+        const db = await openDatabase();
         console.log(db);
         console.log('Database opened successfully!');
 
