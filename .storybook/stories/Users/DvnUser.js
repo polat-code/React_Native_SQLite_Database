@@ -1,4 +1,4 @@
-/*
+
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react'; // Import useState
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, FlatList } from 'react-native'; // Import SafeAreaView and ScrollView
@@ -19,8 +19,7 @@ async function openDatabase(pathToDatabaseFile) {
   return SQLite.openDatabase('myDatabaseName.db');
 }
 
-export default function App() {
-  const [equipmentData, setEquipmentData] = useState([]); // Initialize equipmentData state
+export default function DvnUser({dvn_user}) {
 
   useEffect(() => {
     const initDatabase = async () => {
@@ -74,6 +73,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-*/
-
-export {default} from './.storybook'; 
