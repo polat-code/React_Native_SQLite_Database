@@ -4,9 +4,10 @@
 
 According to Expo-SQLite documentation , 
 
-### 1)Install Dependency
+### 1)Install Dependencies
 
- ``` 
+ ```
+npx expo install expo-sqlite
 npx expo install expo-file-system expo-asset
  
  ```
